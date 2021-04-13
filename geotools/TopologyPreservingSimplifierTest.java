@@ -26,9 +26,9 @@ public class TopologyPreservingSimplifierTest {
 		
 		DriverManager.registerDriver(new com.mysql.jdbc.Driver());
 		
-		con = DriverManager.getConnection("jdbc:mysql://61.254.11.250:33062/yangpyeong", "yangpyeong", "yangpyeong");
+		con = DriverManager.getConnection("jdbc:mysql://ip:port/test", "test", "test");
 		stmt =con.createStatement();
-		rs = stmt.executeQuery("select st_astext(lp.shape) as polygon from land_property as lp join yp_point as yp on lp.a1=yp.PNU");
+		rs = stmt.executeQuery("select st_astext(lp.shape) as polygon from table.name as lp join point as yp on lp.a1=yp.PNU");
 		
 		List<String> polyList = new ArrayList<String>();
 		while(rs.next()) {
