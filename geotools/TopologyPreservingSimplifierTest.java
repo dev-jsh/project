@@ -1,4 +1,4 @@
-package kr.newlayer.lxsdq.sdq.web;
+
 
 import java.sql.Connection;
 import java.sql.DriverManager;
